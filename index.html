@@ -7,6 +7,11 @@
       body {
         background-color: black;
         color: orange;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       table {
         border-collapse: collapse;
@@ -22,48 +27,90 @@
         display: block;
         margin-left: 0;
         max-width: 200px;
+        border-radius: 30%;
       }
+      /* Flex Box */
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+      .container > * {
+        flex-basis: 50%;
+      }
+      .container > div {
+        padding-right: 20px;
+      }
+      a {
+        color: #fff;
+      }
+
     </style>
   </head>
+  <!-- ICONS -->
+  <script src="https://unpkg.com/feather-icons"></script>
   <body>
-    <img src="foto.jpg" alt="Foto" />
-    <h1>Biodata</h1>
-    <table>
-      <tr>
-        <th style="width: 150px">Nama:</th>
-        <td>Adam Syahputra</td>
-      </tr>
-      <tr>
-        <th>NIM:</th>
-        <td>215314193</td>
-      </tr>
-      <tr>
-        <th>Tanggal Lahir:</th>
-        <td>1 Januari 1997</td>
-      </tr>
-      <tr>
-        <th>Alamat:</th>
-        <td>Jalan Tajem</td>
-      </tr>
-      <tr>
-        <th>Pendidikan:</th>
-        <td>S1 Teknik Informatika</td>
-      </tr>
-      <tr>
-        <th>Kampus:</th>
-        <td>Universitas Sanata Dharma</td>
-      </tr>
-    </table>
-    <h1>Contact</h1>
-    <table>
-      <tr>
-        <th style="width: 150px">Email:</th>
-        <td>Addm097@gmail.com</td>
-      </tr>
-      <tr>
-        <th>Whatsapp:</th>
-        <td>082282824797</td>
-      </tr>
-    </table>
+    <div class="container">
+        <img src="foto.jpg" alt="Foto" />
+      <div>
+      <h1><i data-feather="user"></i>Biodata</h1>
+      <table>
+        <tr>
+          <th style="width: 150px">Nama:</th>
+          <td>Adam Syahputra</td>
+        </tr>
+        <tr>
+          <th>NIM:</th>
+          <td>215314193</td>
+        </tr>
+        <tr>
+          <th>Tanggal Lahir:</th>
+          <td>1 Januari 1997</td>
+        </tr>
+        <tr>
+          <th>Alamat:</th>
+          <td>Jalan Tajem</td>
+        </tr>
+        <tr>
+          <th>Pendidikan:</th>
+          <td>Teknik Informatika</td>
+        </tr>
+        <tr>
+          <th>Kampus:</th>
+          <td>Universitas Sanata Dharma</td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <h1><i data-feather="mail"></i>Contact</h1>
+      <table>
+        <tr>
+          <th style="width: 150px">Email:</th>
+          <td>Addm097@gmail.com</td>
+        </tr>
+        <tr>
+          <th>Whatsapp:</th>
+          <td>082282824797</td>
+        </tr>
+        <tr>
+            <th>Instagram:</th>
+            <td><a href="https://www.instagram.com/admsyah_/">Visit</a></td>
+          </tr>
+      </table>
+      <h1 style="text-align: center;">I'm <span class="auto-type"></span></h1>
+    </div>
+    <!-- ICONS -->
+    <script>
+      feather.replace();
+    </script>
+    <!-- Typing Animation -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typed = new Typed(".auto-type",{
+        strings: ["Student", "Learn", "Sleep", "Repeat"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+      });
+    </script>
   </body>
 </html>
